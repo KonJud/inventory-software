@@ -13,10 +13,12 @@ import {
     FolderKanban
 } from 'lucide-react'
 
+import SubscriptionCard from './SubscriptionCard'
+
 export default function Sidebar () {
     return (
         <>
-            <div className='w-56 min-h-screen bg-slate-800 text-slate-50 flex flex-col justify-between'>
+            <div className='w-60 min-h-screen bg-slate-800 text-slate-50 flex flex-col justify-between fixed'>
                 {/* Top Part */}
                 <div className='flex flex-col'>
                     {/* logo */}
@@ -69,17 +71,21 @@ export default function Sidebar () {
                             <span>Documents</span>
                         </Link>
                     </nav>
+
                 </div>
                 
                 
                 {/* Bottom */}
                 <div className='flex flex-col'>
-                    <div className='flex items-center justify-center gap-2 py-3 px-2 bg-slate-950'>
+                    {/* Subcription card */}
+                    <SubscriptionCard />
+                    {/* Footer icon */}
+                    <button className='flex items-center justify-center gap-2 py-3 px-2 bg-slate-950'>
                         <ChevronLeft />
-                    </div>
+                    </button>
                 </div>
-                {/* Subcription card */}
-                {/* Footer icon */}
+
+
             </div>
         </>
     )

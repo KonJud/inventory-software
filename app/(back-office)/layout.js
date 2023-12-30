@@ -9,7 +9,7 @@ export default function Layout({
   return (
     <div className='flex'>
         <Sidebar />
-        <main className='w-full min-h-screen bg-slate-100'>
+        <main className='ml-60 w-full min-h-screen bg-slate-100'>
             <Header />
             {children}
         </main>
