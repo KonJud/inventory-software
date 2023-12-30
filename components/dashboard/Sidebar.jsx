@@ -5,7 +5,12 @@ import {
     Workflow,
     ChevronLeft,
     Home,
-    BaggageClaim
+    BaggageClaim,
+    ShoppingBag,
+    ShoppingBasket,
+    Cable,
+    BarChart3,
+    FolderKanban
 } from 'lucide-react'
 
 export default function Sidebar () {
@@ -22,20 +27,46 @@ export default function Sidebar () {
                         </span>
                     </Link>
                     {/* Links */}
-                    <nav className='flex flex-col gap-4 p-3'>
+                    <nav className='flex flex-col gap-8 px-3 py-6'>
                         <Link
                             href={'/dashbord/home'}
-                            className={'flex space-x-2'}
+                            className={'flex space-x-2 bg-blue-600 text-slate-50 p-2 rounded-md'}
                             >
                             <Home className={'w-5 h-5'}/>
                             <span>Home</span>
                         </Link>
-                        <Link
-                            href={'/dashbord/inventory'}
-                            className={'flex space-x-2'}
-                            >
+                        <button className={'flex space-x-2 p-1'}>
                             <BaggageClaim  className={'w-5 h-5'}/>
                             <span>Inventory</span>
+                        </button>
+                        <button className={'flex space-x-2 p-1'}>
+                            <ShoppingBasket  className={'w-5 h-5'}/>
+                            <span>Sales</span>
+                        </button>
+                        <button className={'flex space-x-2 p-1'}>
+                            <ShoppingBag  className={'w-5 h-5'}/>
+                            <span>Purchases</span>
+                        </button>
+                        <Link
+                            href={'/dashbord/integration'}
+                            className={'flex space-x-2 p-1'}
+                            >
+                            <Cable className={'w-5 h-5'}/>
+                            <span>Integration</span>
+                        </Link>
+                        <Link
+                            href={'/dashbord/reports'}
+                            className={'flex space-x-2 p-1'}
+                            >
+                            <BarChart3 className={'w-5 h-5'}/>
+                            <span>Reports</span>
+                        </Link>
+                        <Link
+                            href={'/dashbord/documents'}
+                            className={'flex space-x-2 p-1'}
+                            >
+                            <FolderKanban className={'w-5 h-5'}/>
+                            <span>Documents</span>
                         </Link>
                     </nav>
                 </div>
