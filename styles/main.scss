@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.header-bg {
+    background-image: url("/public/images/headerDashboardbg.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
