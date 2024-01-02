@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 
 import SalesActivityCard from './SalesActivityCard'
-import InventorySummaryCard from './inventorySummaryCard'
+import InventorySummaryCard from './InventorySummaryCard'
 
 export default function SalesOverview() {
 
