@@ -46,7 +46,7 @@ export default function HomeNavbar () {
                         <span className={'text-sm'}>Username</span>
                     </div>
                 </div>
-                {/* navLinks */}
+                {/* navLinks */} 
                 <nav className={'sticky mt-6 space-x-4'}>
                     {navLinks.map((item, i) => (
                         <Link
