@@ -5,17 +5,78 @@ import {
     Workflow,
     ChevronLeft,
     Home,
-    BaggageClaim,
     ShoppingBag,
     ShoppingBasket,
     Cable,
     BarChart3,
-    FolderKanban
+    FolderKanban,
+    BaggageClaim
 } from 'lucide-react'
 
 import SubscriptionCard from './SubscriptionCard'
 
+import SidebarDropdownLinks from './SidebarDropdownLinks'
+  
+
 export default function Sidebar () {
+
+    const inventoryLinks = [
+        {
+            title: 'Item',
+            href: '/dashboard/inventory'
+        },
+        {
+            title: 'Item Groups',
+            href: ''
+        },
+        {
+            title: 'Inventory Adjust',
+            href: ''
+        }
+    ]
+    const salesLinks = [
+        {
+            title: 'Customers',
+            href: '#'
+        },
+        {
+            title: 'Sales Orders',
+            href: '#'
+        },
+        {
+            title: 'Inventory Adjust',
+            href: '#'
+        },
+        {
+            title: 'Packages',
+            href: '#'
+        },
+        {
+            title: 'Shipments',
+            href: '#'
+        },
+        {
+            title: 'Invoices',
+            href: '#'
+        },
+        {
+            title: 'Sales Receipts',
+            href: '#'
+        },
+        {
+            title: 'Payment Receved',
+            href: '#'
+        },
+        {
+            title: 'Sales Return',
+            href: '#'
+        },
+        {
+            title: 'Credit Notes',
+            href: '#'
+        }
+    ]
+
     return (
         <>
             <div className='w-60 min-h-screen bg-slate-800 text-slate-50 flex flex-col justify-between fixed'>
@@ -37,14 +98,21 @@ export default function Sidebar () {
                             <Home className={'w-5 h-5'}/>
                             <span>Home</span>
                         </Link>
-                        <button className={'flex space-x-2 p-1'}>
-                            <BaggageClaim  className={'w-5 h-5'}/>
-                            <span>Inventory</span>
-                        </button>
-                        <button className={'flex space-x-2 p-1'}>
-                            <ShoppingBasket  className={'w-5 h-5'}/>
-                            <span>Sales</span>
-                        </button>
+                        
+                        <SidebarDropdownLinks 
+                            title='Inventory'
+                            items={inventoryLinks}
+                            icon={BaggageClaim}
+                        />
+                        <SidebarDropdownLinks 
+                            title='Sales'
+                            items={salesLinks}
+                            icon={ShoppingBasket}
+                        />
+
+
+                        
+                        
                         <button className={'flex space-x-2 p-1'}>
                             <ShoppingBag  className={'w-5 h-5'}/>
                             <span>Purchases</span>
